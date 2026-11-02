@@ -86,4 +86,3 @@ The contact buttons navigate to the contact section. Visitors can create a draft
 The layout was inspired by [Akash Balasubramaniyam’s portfolio](https://akashblsbrmnm.in/) and implemented independently for Akash Jose. The source does not include that site's personal content or assets.
 
 Inter Display Bold is distributed under the SIL Open Font License; see `dist/assets/Inter-LICENSE.txt`. The portrait and resume are personal assets. The supplied resume is preserved unchanged; its email and AfterBell framework wording differ from the preferred website email and repository-verified project description.
-
