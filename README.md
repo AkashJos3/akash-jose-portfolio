@@ -2,7 +2,9 @@
 
 A responsive portfolio showcasing my software projects, education, technical skills and engineering interests.
 
-**Live website:** https://akash-jose-portfolio.leafyanole8.chatgpt.site
+**GitHub Pages URL (after deployment):** https://akashjos3.github.io/akash-jose-portfolio/
+
+**Existing hosted website:** https://akash-jose-portfolio.leafyanole8.chatgpt.site
 
 ## About
 
@@ -71,7 +73,13 @@ verify.py             # Local link, asset and HTML checks
 
 ## Hosting
 
-The published site is hosted with Sites. The `dist/` directory is a self-contained static website and can be served by another static host. Update the absolute social-preview image URL in `generate.py` if changing the public domain. Pushing to this repository does not automatically deploy the live site.
+GitHub Pages publishes `dist/` using `.github/workflows/deploy-pages.yml`. Enable **Settings → Pages → Source → GitHub Actions**, then run **Deploy portfolio to GitHub Pages** from the Actions tab. Subsequent pushes to `main` generate, check and deploy the site automatically.
+
+The workflow runs `python3 generate.py`, `python3 verify.py` and JavaScript syntax checks before uploading `dist/`. It needs no repository secrets, npm install or custom domain. GitHub supplies the short-lived deployment token.
+
+Edit content in `generate.py`; edit presentation and interactions in `dist/style.css`, `dist/app.js` and `dist/theme.js`. Avoid editing generated HTML alone because the next workflow run regenerates it.
+
+The existing Sites deployment is separate and is not updated by this workflow. If moving to a custom domain later, update the absolute social-preview image URL in `generate.py`.
 
 ## Contact
 
